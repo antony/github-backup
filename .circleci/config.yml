@@ -19,7 +19,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: Eslint
+          name: Standard Lint
           command: npm run lint
 
       - store_test_results:

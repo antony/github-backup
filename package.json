@@ -10,8 +10,8 @@
     "lint": "standard"
   },
   "author": {
-    "name" : "Antony Jones",
-    "email" : "aj@desirableobjects.co.uk"
+    "name": "Antony Jones",
+    "email": "aj@desirableobjects.co.uk"
   },
   "license": "MIT",
   "dependencies": {
@@ -25,5 +25,8 @@
     "multispinner": "^0.2.1",
     "ora": "^2.1.0",
     "simple-git": "^1.96.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
   }
 }
