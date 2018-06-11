@@ -1,12 +1,18 @@
 {
-  "name": "ghsv",
+  "name": "gh-backup",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backup all of your organisation's github repositories, including pagination",
   "main": "index.js",
-  "scripts": {
+  "bin": {
     "github-backup": "./index.js"
   },
-  "author": "",
+  "scripts": {
+    "lint": "standard"
+  },
+  "author": {
+    "name" : "Antony Jones",
+    "email" : "aj@desirableobjects.co.uk"
+  },
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",

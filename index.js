@@ -76,7 +76,7 @@ async function init () {
 
 async function createEnv () {
   const mkdirPrms = promisify(mkdirp)
-  await mkdirp(workingDir)
+  await mkdirPrms(workingDir)
 }
 
 init()
