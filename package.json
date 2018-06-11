@@ -1,0 +1,23 @@
+{
+  "name": "ghsv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "github-backup": "./index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "cli-spinners": "^1.3.1",
+    "execa": "^0.10.0",
+    "gh-got": "^7.0.0",
+    "hoek": "^5.0.3",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "multispinner": "^0.2.1",
+    "ora": "^2.1.0",
+    "simple-git": "^1.96.0"
+  }
+}
