@@ -16,7 +16,6 @@ const { workingDir, organisation, token } = argv
 
 assert(workingDir, '--workingDir is required')
 assert(organisation, '--organisation is required')
-assert(token, '--token is required')
 
 function findLink (links, type) {
   const nextLink = links.find(l => l.includes(`rel="${type}"`))
@@ -25,7 +24,8 @@ function findLink (links, type) {
 }
 
 async function fetchPage (page) {
-  const res = await ghGot(`orgs/${organisation}/repos?page=${page}`, { token })
+  const options = token ? { token } : {}
+  const res = await ghGot(`orgs/${organisation}/repos?page=${page}`, options)
 
   const links = res.headers.link.split(',')
   const nextPage = findLink(links, 'next')

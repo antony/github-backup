@@ -21,4 +21,8 @@ npm i -g gh-backup
 github-backup --token <your-token-from-above> --organisation <organisation> --workingDir=./some/path
 ```
 
-Organisation is your organisation name, and workingDir is where you want the repositories cloned to.
+Where:
+
+* `token` is your github token (optional)
+* `organisation` is your organisation name
+* `workingDir` is where you want the repositories cloned to. If it does not exist it will be created.
