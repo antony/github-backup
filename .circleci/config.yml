@@ -39,7 +39,7 @@ jobs:
 
       - run:
           name: Publish to NPM
-          command: npm publish
+          command: npm publish --access public 
 
 workflows:
   version: 2

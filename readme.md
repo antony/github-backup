@@ -4,6 +4,14 @@ A tool to backup all of your organisation's github repositories.
 
 [![CircleCI](https://circleci.com/gh/antony/github-backup.svg?style=shield)](https://circleci.com/gh/antony/github-backup) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+### Features
+
+* Private repositories
+* Paginates an entire github organisation, not just the first page!
+* Parallel clone (10 streams)
+* Intuitive CLI to show progress
+* Uses github API v3
+
 ### Why?
 
 There are a lot of tools out in the wild for the same purpose, but not a single one of them works reliably or paginates a large organisation, so you get the first 50-100 repositories and then you have to edit the code to get more...

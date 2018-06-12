@@ -17,7 +17,9 @@ const { workingDir, organisation, token } = argv
 assert(workingDir, '--workingDir is required')
 assert(organisation, '--organisation is required')
 
-function findLink (links, type) {
+function findLink (linkHeader, type) {
+  if (!linkHeader) { return null }
+  const links = linkHeader.split(',')
   const nextLink = links.find(l => l.includes(`rel="${type}"`))
   if (!nextLink) { return null }
   return nextLink.match(/page=([0-9]+)/)[1]
@@ -27,8 +29,7 @@ async function fetchPage (page) {
   const options = token ? { token } : {}
   const res = await ghGot(`orgs/${organisation}/repos?page=${page}`, options)
 
-  const links = res.headers.link.split(',')
-  const nextPage = findLink(links, 'next')
+  const nextPage = findLink(res.headers.link, 'next')
   const repos = res.body.map(repo => ({
     url: repo.ssh_url,
     name: repo.name
