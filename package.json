@@ -1,6 +1,6 @@
 {
   "name": "@antony/github-backup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Backup all of your organisation's github repositories, including pagination",
   "main": "index.js",
   "bin": {
